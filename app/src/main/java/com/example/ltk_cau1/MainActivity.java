@@ -47,4 +47,24 @@ public class MainActivity extends AppCompatActivity {
         mButtonThoat = findViewById(R.id.button_Thoat);
     }
 
+    protected void Dialog(){
+        AlertDialog.Builder ad =  new AlertDialog.Builder(this);
+        ad.setTitle("Thông báo");
+        ad.setMessage("Bạn muốn thoát không ?");
+        ad.setPositiveButton("không", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+
+        ad.setNegativeButton("có", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+        ad.show();
+
+    }
 }
